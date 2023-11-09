@@ -17,4 +17,4 @@ class TestLogout:
         WebDriverWait(browser, 3).until(expected_conditions.url_contains("/account/profile"))
         browser.find_element(*TestLocators.LOGOUT_BUTTON).click()
         WebDriverWait(browser, 3).until_not(expected_conditions.url_contains("/account/profile"))
-        assert browser.current_url == "https://stellarburgers.nomoreparties.site/login"
+        assert browser.find_element(*TestLocators.ENTER_BUTTON)
